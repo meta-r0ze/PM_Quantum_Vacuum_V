@@ -1,0 +1,49 @@
+\crefalias{section}{appendix}
+\section{The Neutron Lifetime Resolution (\texorpdfstring{$\tau_n$}{taun})}
+
+\textbf{The Anomaly:} Precision measurements of the neutron mean lifetime exhibit a $4\sigma$ discrepancy depending on the method used.
+\begin{itemize}
+    \item \textbf{Bottle Experiments (Storage):} $\tau_{bottle} = 877.75 \pm 0.28$ s.
+    \item \textbf{Beam Experiments (Flight):} $\tau_{beam} = 888.0 \pm 2.0$ s.
+    \item \textbf{Difference:} $\approx 10$ seconds.
+\end{itemize}
+Standard physics cannot explain why neutrons appear to live longer when in flight than when confined.
+
+\textbf{The $E_8$ Derivation:} In this framework, the neutron is defined by the \textbf{Symmetry Half-Step} ($M_n \approx M_p + \sigma/2$). Its decay ($n \to p + e + \bar{\nu}$) involves relaxing this symmetry tension through the topological boundary ($\chi$).
+
+We posit that the decay rate is sensitive to the \textbf{Geometric Boundary Condition}:
+\begin{enumerate}
+    \item \textbf{Confined State (Bottle):} The neutron interacts with the container walls (matter). This reinforces the topological boundary ($\chi$), allowing the decay to proceed at the nominal geometric rate determined by the residual.
+    \item \textbf{Free State (Beam):} The neutron propagates in a vacuum. Lacking boundary reinforcement, the decay phase space is dilated by the \textbf{Symmetry-Depth Ratio}. The vacuum impedance suppresses the decay width by the ratio of the Boundary Leakage ($\chi/\sigma$) to the Resonant Depth ($\Delta$).
+\end{enumerate}
+
+\textbf{The Geometric Correction Factor:}
+We calculate the lifetime dilation factor $\mathcal{D}$ as the resonance depth expanded by the boundary-symmetry ratio:
+\begin{equation}
+\mathcal{D} = \frac{\Delta}{\Delta - (\chi/\sigma)}
+\end{equation}
+
+\textbf{Calculation:}
+Using the invariants $\Delta=43$, $\chi=2$, $\sigma=5$:
+$$ \chi/\sigma = 0.4 $$
+\begin{equation}
+\mathcal{D} = \frac{43}{43 - 0.4} = \frac{43}{42.6} \approx \mathbf{1.00939}
+\end{equation}
+
+\textbf{Predicted Beam Lifetime:}
+Applying this dilation to the precise Bottle measurement:
+\begin{equation}
+\tau_{beam} = \tau_{bottle} \times \mathcal{D} = 877.75 \text{ s} \times 1.00939
+\end{equation}
+\begin{equation}
+\tau_{beam} \approx \mathbf{886.0 \text{ s}}
+\end{equation}
+
+\textbf{Comparison:}
+\begin{itemize}
+    \item \textbf{Geometric Prediction:} $886.0$ s
+    \item \textbf{Experimental Average (Beam):} $888.0 \pm 2.0$ s
+    \item \textbf{Result:} The derivation bridges the gap, landing within $1\sigma$ of the beam value.
+\end{itemize}
+
+\textbf{Conclusion:} The neutron lifetime discrepancy is not an error; it is a measurement of the \textbf{Topological Environmental Effect}. Bottle experiments measure the intrinsic decay rate; Beam experiments measure the rate dilated by the vacuum's geometric impedance to the symmetry relaxation.
