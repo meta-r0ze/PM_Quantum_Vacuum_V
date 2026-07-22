@@ -15,6 +15,11 @@
 \usepackage{catchfilebetweentags} 
 
 \makeatletter
+\providecommand*{\input@path}{}
+\g@addto@macro\input@path{{calculations/}}
+\makeatother
+
+\makeatletter
 \let\l@de\l@ngerman
 \makeatother
 \makeatletter
@@ -24,11 +29,11 @@
 \begin{document}
 
 % Title Area
-\title{The \texorpdfstring{$E_8$}{E8}-Persistence Theory: Particles}
+\title{Informational Energetics: Decay}
 
 \author{Kate Lenore Meyer}
 \affiliation{Independent Researcher} % Or your institution if applicable
-\email{kate.physics@meyerhome.net}
+\email{kate.ie@meyerhome.net}
 
 \date{\today}
 
@@ -40,23 +45,19 @@
 
 \input{paper/1_introduction}
 
-\input{paper/2_config}
-\input{paper/3_filter}
-\input{paper/4_decay}
-\input{paper/5_islands}
-\input{paper/6_analysis}
-\input{paper/7_decay}
-\input{paper/8}
-\input{paper/9_neutrinos}
-\input{paper/10_geometric_properties}
-\input{paper/11_dynamic_validation}
-\input{paper/12_audit}
+\input{paper/2_ie}
+\input{paper/3_info_transit}
+\input{paper/4_protocols}
+\input{paper/5_decay}
+\input{paper/6_protocol_ledger}
+\input{paper/7_composites}
+\input{paper/8_decay_time}
+\input{paper/8_anomalies}
 
-\input{paper/13_conclusion}
+\input{paper/10_conclusion}
 
-\appendix
-\input{paper/14_appendix}
-\input{paper/15_appendix}
+%\appendix
+%\input{paper/14_appendix}
 
 
 % Bibliography
