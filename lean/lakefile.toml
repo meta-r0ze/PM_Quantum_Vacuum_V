@@ -1,0 +1,14 @@
+name = "pm_decay"
+version = "0.1.0"
+defaultTargets = ["PMDecay"]
+
+[[lean_lib]]
+name = "PMDecay"
+
+[[require]]
+name = "pm_arch"
+path = "../../PM-1-Arch/lean"
+
+[[require]]
+name = "pm_nested"
+path = "../../PM-3-Nested/lean"
