@@ -4,7 +4,7 @@
 \usepackage{amsmath}  % Math formulas
 \usepackage{amssymb}  % Math symbols (like \mathbb, \mathcal)
 \usepackage{graphicx} % Images
-\usepackage[pdfencoding=auto]{hyperref} % Hyperlinks
+\usepackage[pdfencoding=auto,hidelinks]{hyperref} % Hyperlinks
 \usepackage{bm}       % Bold math
 \usepackage{booktabs} % For professional table formatting
 \usepackage{array}    % For better column definitions
@@ -26,10 +26,11 @@
 \let\l@en\l@english
 \makeatother
 
+\hypersetup{pdftitle={Persistence Mechanics V: Decay as a Conditional Routing Model},pdfauthor={Kate Lenore Meyer}}
 \begin{document}
 
 % Title Area
-\title{Persistence Mechanics of the Quantum Vacuum V : Decay}
+\title{Persistence Mechanics of the Quantum Vacuum V: Decay as a Conditional Routing Model}
 
 \author{Kate Lenore Meyer}
 \affiliation{Independent Researcher} % Or your institution if applicable
@@ -56,9 +57,15 @@
 
 \input{paper/10_conclusion}
 
-%\appendix
-%\input{paper/14_appendix}
+\appendix
+\section{Formalization and Reproducibility}
+The companion \texttt{lean} folder uses Lean 4.34.1 and pinned mathlib dependencies shared with Paper I. Running \texttt{./check.sh} builds the library and checks every project declaration for unapproved transitive axioms. The allowlist contains only Lean's standard logical foundations.
 
+The modules check routing descent and conserved labels; constant-hazard survival identities; partial-width sums and lifetime scaling; and mass-dimension bookkeeping. The fifth-power result assumes a local four-fermion interaction and the stated scaling of its amplitude. No spinor matrix element, phase-space integral, measured particle input or microscopic routing law is silently promoted to a proved physical fact.
+
+
+
+\input{paper/11_external_comparison}
 
 % Bibliography
 \bibliography{paper/references}

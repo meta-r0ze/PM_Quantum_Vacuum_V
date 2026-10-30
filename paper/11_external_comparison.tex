@@ -1,0 +1,41 @@
+\section{External Comparison Target}
+\label{app:weak_comparison}
+The following standard scaling calculation identifies what the internal derivation should reproduce. It is not used as a proof from $E_8$.
+
+For a standard effective weak interaction, the fifth power follows from its invariant measure and amplitude scaling. In natural units, the standard decay formula is\cite{navas_review_2024}
+\begin{equation}
+d\Gamma=\frac{1}{2M}|\mathcal M|^2d\Phi_n,
+\end{equation}
+where an overall $(2\pi)$ convention can be absorbed into $d\Phi_n$. For fixed dimensionless final-state coordinates,
+\begin{equation}
+d\Phi_n\ \propto\ \delta^{(4)}\!\left(P-\sum_i p_i\right)
+\prod_{i=1}^n\frac{d^3p_i}{2E_i}.
+\end{equation}
+When all momenta and energies scale with $M$, each on-shell factor contributes $M^2$ and the delta function contributes $M^{-4}$. Thus
+\begin{equation}
+d\Phi_n\propto M^{2n-4},\qquad d\Phi_3\propto M^2.
+\end{equation}
+The kinematic dimension $3n-4=5$ for three daughters is a different quantity.
+
+If the preceding interface model supplies a massive $W$ field with a canonically normalized left-handed current coupling $g$, its propagator at momenta much smaller than $M_W$ produces a contact coefficient proportional to $g^2/M_W^2$. In the usual electroweak convention, tree-level matching gives
+\begin{equation}
+\frac{G_F}{\sqrt2}=\frac{g^2}{8M_W^2}
+=\frac{1}{2v^2},\qquad M_W=\frac{gv}{2}.
+\end{equation}
+Lean checks the last algebraic equality for nonzero $g$ and $v$. The current structure and low-energy mediator approximation remain physical premises. This is the explicit bridge a routing derivation must supply; the subsequent mass scaling follows from the resulting effective interaction.
+
+A canonically normalized Dirac kinetic term in four dimensions gives $2[\psi]+1=4$, so $[\psi]=3/2$. A local current--current operator contains four fermion fields and has dimension six. Its coefficient therefore has dimension $4-6=-2$; this is the dimension of $G_F$.
+
+For $M\ll M_W$, a local derivative-free four-fermion interaction supplies an amplitude of order $G_FM^2$, hence $|\mathcal M|^2\propto G_F^2M^4$. Combining the three factors gives
+\begin{equation}
+\Gamma\propto M^{-1}\,G_F^2M^4\,M^2=G_F^2M^5.
+\end{equation}
+Equivalently, $[G_F]=-2$ and $[\Gamma]=1$ require $2(-2)+5=1$ when no other dimensionful scale is present. This fixes the exponent under the effective-interaction assumptions; it does not fix a dimensionless coefficient or a channel weight.
+
+For the usual V--A muon interaction, neglecting daughter masses and radiative corrections, the spin and phase-space calculation gives\cite{navas_review_2024}
+\begin{equation}
+\Gamma_\mu=\frac{G_F^2m_\mu^5}{192\pi^3},\qquad
+\tau_\mu=\frac{\hbar}{\Gamma_\mu}.
+\end{equation}
+The coefficient requires that interaction and its phase-space integral. Nonzero daughter masses produce a dimensionless function of mass ratios; mixing, thresholds and radiative corrections supply further factors. Near an on-shell mediator the local four-fermion approximation fails. A routing theory must reproduce the effective interaction and these corrections before claiming this result as a microscopic prediction.
+

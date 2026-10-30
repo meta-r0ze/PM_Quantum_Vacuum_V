@@ -1,229 +1,57 @@
-
-
-% The Nature of Stochasticity: Mainstream quantum mechanics views decay as fundamentally probabilistic (half-lives). Your abstract says: "Particle lifetimes are not arbitrary random variables. They are the exact, deterministic processing times..." If the network is entirely deterministic, you must briefly explain why decay looks probabilistic to an observer inside the system. (e.g., Is it due to background network traffic/vacuum fluctuations causing variable arrivals of the Landauer Ledger Crisis?).
-
-% The Transition Topology:If Paper 1 establishes the 4D spacetime projection using the Stark-Heegner numbers (Δ=43), Paper 4 needs to explain how a protocol transitions through the boundary. When a particle decays, it doesn't vanish; its data payload is split into lighter cohorts (e.g., Muon → Electron + Neutrinos). From a networking perspective, this is packet fragmentation. Introduce the narrative concept of Packet Fragmentation Protocols to explain why the decay products are what they are.
-
-% The Conservation of "Bits": if the universe is an E 8  network, conservation laws (charge, baryon number, lepton number) are network invariants (like headers or checksums that cannot be dropped during a re-route). The narrative should explicitly state that while the complex architecture (the heavy particle) decays to save processing costs, the fundamental data bits (quantum numbers) are strictly conserved by the network's low-level protocol.
-
-\section{The Thermodynamics of Decay: Re-Routing and Lifetimes}
+\section{Widths, Scaling Laws, and Mean Lifetimes}
 \label{sec:particle_decay}
+\subsection{Internal derivation status and obligations}
+A dual substrate account should obtain the decay law from the substrate definition and earlier established dynamics. A familiar external weak-interaction calculation is a comparison target, not a substitute for that derivation.
 
+The earlier formalization establishes the lattice geometry, scheduling and selected bookkeeping quantities. It does not yet construct an $E_8$ transition operator whose continuum limit has a canonically normalized fermion kinetic term, a chiral current, a massive mediator and the relevant decay measure. Those steps must be proved before the fifth power can be claimed as an unconditional substrate result.
 
-**The Network Heat Sinks:** When a high-latency protocol (e.g., a Muon) experiences a Ledger Crisis ($\Phi_{drag} > CAP$) and re-routes into a lower-latency state (an Electron), the excess Thermodynamic Latency (Mass) cannot simply vanish. By the Unitary Flux Constraint and Reversible Encoding, this shed complexity must be exported to the environment. Because the quantum vacuum is a closed system, it must possess an internal ``exhaust'' mechanism to absorb this shed latency. The network accomplishes this via Lattice Phonons (Neutrinos). Because they carry no topological anchors, they preserve the chiral phase (spin-1/2) shed during a decay event without accumulating macroscopic geometric drag.
-
-In standard Quantum Field Theory, particle lifetimes are calculated using empirical mass values, measured coupling constants, and phenomenological phase-space integrals (e.g., Sargent's Law). The theory describes \textit{how} things decay, but cannot explain \textit{why} the muon lives for microseconds while the top quark vanishes in yoctoseconds, relying entirely on the manual input of their mass hierarchies.
-
-In the $E_8$-Persistence framework, the mass of a particle is not a fundamental property; it is the \textbf{Thermodynamic Latency} of executing a specific routing protocol. Consequently, \textbf{Decay is a Re-Routing Event.} 
-
-By the Principle of Least Entropic Action (derived in Paper 2), the network constantly seeks to minimize internal latency. If a highly complex information packet (a heavy particle) can be repackaged into a simpler routing protocol (a lighter particle) while preserving its strict topological boundary constraints (Charge/Color), it will do so. 
-
-The lifetime of any particle is strictly the time required for the lattice to process this state-translation through the available network bandwidth.
-
-\subsection{The Stability Lock: Topological Ground States}
-Why do the Electron and Proton live forever, while the Muon and Delta baryons decay? Stability is not a function of geometric perfection, but of \textbf{Protocol Exhaustion}. 
-
-\begin{itemize}
-    \item \textbf{The Electron} is the fundamental Singlet Protocol (Tier 0). It routes strictly through the 2D boundary without engaging the internal color bulk. There is no simpler protocol that preserves the $\chi=2$ topological charge. It is the \textbf{Unitary Ground State} and is therefore absolutely stable against the vacuum.
-    \item \textbf{The Proton} is the fundamental Fractional Protocol (Tier 2). It is the lowest-latency configuration that successfully distributes its flux across the internal 3D color bulk while satisfying topological closure. No lower-latency state exists that can maintain this specific $SU(3)$ bulk interaction. It is \textbf{Topologically Locked}.
-\end{itemize}
-
-A particle decays if, and only if, a lower-latency routing protocol exists within its identical topological class.
-
-\subsection{The Mechanism of Decay: The W-Boson Aperture}
-When a higher-tier overtone (like a Muon, $\Delta^1$) seeks to shed its excess latency and drop to the ground state (the Electron, $\Delta^0$), it must dump its excess capacity into the vacuum. 
-
-However, information cannot simply vanish. To transfer latency between orthogonal geometric tiers, the state must pass through the \textbf{Resonant Interface}---the geometric infrastructure allocated for spatial/temporal updates. As established in \textit{Nested Persistence}, this interface is physically manifested as the Weak Gauge Bosons ($W^\pm$).
-
-The probability of a decay event occurring per fundamental clock cycle is strictly limited by the \textbf{Geometric Aperture} of this $W$-boson bottleneck.
-
-
-
-
-\subsection{The Gauge Decay Flux: The $\Gamma_W / \Gamma_Z$ Ratio}
-
-In Informational Energetics, decay widths ($\Gamma$) represent transition fluxes constrained by the local geometric capacity of the substrate. If the Weak force operates as a finite geometric aperture, the decay widths of the $W$ and $Z$ bosons themselves must be strictly regulated by the available interaction dimensions.
-
-The Weak force operates on the internal Interaction Symmetry ($\sigma=5$). However, the $Z$ boson acts as the neutral current (mixing with the photon), coupling to the full state-occupancy resolution of the node ($\sigma+1=6$ degrees of freedom). The $W$ boson, as the charged current, is restricted strictly to the chiral interaction generators ($\sigma=5$).
-
-We define the \textbf{Geometric Aperture Ratio} of the Weak force as the strict fractional ratio of these available interaction dimensions:
+There is a precise conditional bridge. With the earlier four-dimensional baseline, suppose the internal action yields a field scaling dimension $d$, a four-field coupling dimension $c$, and a width exponent $k$ satisfying
 \begin{equation}
-    \mathcal{R}_{geo} = \frac{\sigma}{\sigma+1} = \frac{5}{6} \approx 0.8333
+2d+1=4,\qquad c+4d=4,\qquad 2c+k=1.
 \end{equation}
+Then $d=3/2$, $c=-2$ and $k=5$. Lean checks this implication directly using the earlier baseline. The equations about kinetic, interaction and rate scaling remain explicit proof obligations, not imported facts or new global axioms. Each now has a derived source, stated as a scaling degree of an actual formula (\texttt{ScalingObligations}). The kinetic operator of Paper~II's Hamiltonian is linear in momentum and squares to $|k|^2$, so it is first order with unit speed (\texttt{momentum\_linear}, \texttt{dispersion}). $G_F=1/(\sqrt2v^2)$, derived from the electroweak reference of Paper~III, has degree $-2$ (\texttt{fermi\_scaling}). The leptonic width $G_F^2m^5/(192\pi^3)$ derived below has degree $5$ in the mass, and rescaling $G_F$ by $r^{-2}$ and $m$ by $r$ multiplies it by $r$ (\texttt{rate\_scaling}, \texttt{rate\_dimension\_one}), so the three relations hold at $(3/2,-2,5)$ (\texttt{obligations\_met}). What remains assumed is the dimension count of the action, which turns derivative order one into $2d+1=4$, and the contact-interaction inputs of the width.
 
-Comparing this fundamental lattice ratio to the experimental decay widths of the Weak bosons ($\Gamma_W \approx 2.085 \pm 0.042$ GeV, $\Gamma_Z \approx 2.4952 \pm 0.0023$ GeV, PDG 2024), we find:
-\begin{equation}
-    \frac{\Gamma_W}{\Gamma_Z} \approx \frac{2.085}{2.4952} \approx 0.8356
+The lattice geometry alone does not choose the exponent. Lean gives an internal witness: on the explicit $E_8$ lattice, let $m(z)=\langle z,z\rangle/2$. Both $m(z)^3$ and $m(z)^5$ are positive for nonzero $z$, invariant under every norm-preserving symmetry, and equal to one on a chosen root. On twice that root they give $64$ and $1024$. Thus symmetry, positivity and one-root calibration are insufficient; an actual transition law must distinguish them.
+
+\paragraph{Comparison boundary.} Appendix~\ref{app:weak_comparison} records the conventional weak-interaction calculation as a target for the proposed duality. It is not used to establish an $E_8$ transition operator. Until the internal scaling relations above are derived, the reference-width law below remains a stated benchmark model.
+
+\subsection{A reference-width model}
+Retain the illustrative ansatz
+\begin{equation}\label{eq:reference_width}
+\Gamma(M)=\Gamma_0\left(\frac{M}{M_0}\right)^5|V|^2CF,
 \end{equation}
+with equal-channel multiplicity $C$ and phase-space factor $0<F\leq1$. At fixed other inputs, the lifetime scales inversely with each width factor. In particular, reducing $F$ increases the lifetime: it cannot correct an estimate that is already too long while all other inputs remain fixed.
 
-The experimental decay width ratio aligns with the discrete geometric aperture ($5/6$) to within $\mathbf{0.27\%}$. This confirms that decay width hierarchies are not arbitrary kinematic parameters, but are strictly regulated by the integer geometry of the interaction generators. Particle decay is literally the exhaustion of geometric aperture.
-
-
-
-// Gears to throughput constraints
-
-
-\subsection{Deriving Sargent's Law as Network Bandwidth}
-Standard physics relies on Sargent's Law ($\Gamma \propto G_F^2 M^5$) to calculate the decay rate of particles via the Weak interaction. In our framework, this is not an empirical phase-space rule; it is the exact, irreducible equation for network bandwidth capacity.
-
-The decay rate ($\Gamma$) is the Transition Flux ($f$) required to dissipate the particle's routing latency into the vacuum.
-\begin{equation}
-    \Gamma_{decay} \propto \mathcal{A}_{interface}^2 \times \mathcal{V}_{dissipation}
-\end{equation}
-
-\textbf{1. The Interface Aperture ($\mathcal{A}_{interface}^2 \rightarrow G_F^2$):} 
-The state must successfully couple to the $W$-boson interface. The capacity of this interface is the Fermi Constant ($G_F$), which we derived purely geometrically in \textit{Nested Persistence} as the inverse squared capacity of the Higgs resonant interface, attenuated by the $1/\sqrt{2}$ 1D chiral projection factor. The probability of successfully threading this interface scales as the square of this aperture ($G_F^2$).
-
-\textbf{2. The Dissipation Volume ($\mathcal{V}_{dissipation} \rightarrow M^5$):} 
-Once through the aperture, the excess routing latency (the Mass, $M$) must be flushed into the vacuum as new, independent information packets (e.g., neutrinos). 
-On a discrete 4-dimensional causal manifold, a 3-body exit state (e.g., $\mu \rightarrow e + \nu_\mu + \bar{\nu}_e$) possesses exactly 5 independent kinetic degrees of freedom (three 3D momentum vectors, constrained by 4D energy-momentum conservation: $9 - 4 = 5$). 
-Therefore, to successfully dissipate the latency $M$ into the background metric, the configuration space volume strictly scales with the fifth power of the latency: $M^5$.
-
-\textbf{Conclusion:} Sargent's law is the exact geometric limit of a 4-dimensional network dissipating latency through a finite-capacity interface.
-
-
-
-\subsection{The Hierarchy of Entropic Resistance (The Four Gears of Decay)}
-
-Standard models treat half-lives as a continuous spectrum parameterized by individual phase-space integrals and arbitrary couplings. However, when the fundamental particles and resonances are sorted by their lifetimes, they do not form a random continuum. They clump strictly into four distinct temporal bands. 
-
-In the $E_8$-Persistence framework, this clustering is structurally mandatory. Particle decay is the algorithmic re-routing of information to clear local bandwidth. The lifetime of a state is strictly dictated by the geometric "cable" (the interface) through which its information must be transferred. We identify four strict "Gears" of transmission on the lattice:
-
-\begin{enumerate}
-    \item \textbf{Gear 4: The Bulk Substrate ($10^{-24}$ -- $10^{-25}$ s).} 
-    \textit{Wide Open Bandwidth.} If a state can re-route without changing its topological identity or emitting a photon, it decays at the fundamental clock rate of the lattice. This is the Strong Force regime. Because the 3D internal color bulk is fully active, states like the $\Delta(1232)$ baryon, the $\rho$ meson, and the $W/Z$ bosons dissipate almost instantly. The Top Quark resides here because its massive payload physically overflows and shreds the 1D Weak bottleneck, forcing a bulk capacity overflow.
-    
-    \item \textbf{Gear 3: Electromagnetic Resistance ($10^{-16}$ -- $10^{-21}$ s).} 
-    \textit{The $\alpha^2$ Toll.} If a state must emit a photon to shed latency (because bulk color channels are conserved), it must interact with the topological boundary ($\chi=2$). This imposes the geometric vacuum impedance ($\alpha \approx 1/137$). The decay rate is geometrically suppressed by $\alpha^2$ relative to the strong force. Particles like the $\pi^0$, $\eta$, and $\Sigma^0$ are trapped in this gear.
-    
-    \item \textbf{Gear 2: The Weak Bottleneck ($10^{-12}$ -- $10^{-13}$ s).} 
-    \textit{The 1D Chiral Aperture.} If a state must change its internal flavor identity, it cannot use the 3D bulk or the 2D boundary. It must push its information through the 1D chiral $W$-boson interface. Forcing a massive 3D resonance through a 1D chiral aperture incurs a massive geometric choke-point, extending lifetimes by millions of times relative to the EM gear. The $\tau$ lepton, $c$ quark, and $b$ quark reside here.
-    
-    \item \textbf{Gear 1: Geometric Suppression ($10^{-6}$ -- $10^{3}$ s).} 
-    \textit{Fractional Routing.} If a state must traverse the 1D Weak interface \textit{and} cross an orthogonal generational boundary (CKM suppression), or if its exit payload occupies nearly all of the available $M^5$ phase space (kinematic truncation), it hits the absolute floor of network transmission. The Muon (the baseline), the Kaons, the $\pi^\pm$, and the free Neutron are severely bottlenecked by these geometric fractional routings.
-\end{enumerate}
-
-This hierarchy demonstrates that the apparent randomness of particle lifetimes is an illusion. The decay spectrum is the exact signature of a finite-capacity network executing four distinct hardware routing protocols.
-
-
-\subsection{The Dimensional Scaling of the Four Gears}
-
-Standard models treat half-lives as a continuous spectrum parameterized by independent phase-space integrals and arbitrary couplings. However, when sorted by lifetimes, particles do not form a random continuum. They cluster strictly into four distinct temporal bands. 
-
-In the $E_8$-Persistence framework, this clustering is structurally mandatory. Particle decay is the algorithmic re-routing of information to clear local bandwidth. The geometric dimensionality of the interface strictly determines the phase-space exponent of the decay ($\Gamma \propto M^n$). While Sargent's Law traditionally asserts an $M^5$ scaling for Weak decays, this framework derives exact geometric exponents for the entire particle spectrum:
-
-\begin{enumerate}
-    \item \textbf{Gear 4: The Bulk Substrate ($10^{-24}$ -- $10^{-25}$ s).} 
-    \textit{The $M^1$ Scaling.} If a state re-routes without emitting a photon or changing topological identity, it decays across the 3D internal color bulk (the Strong Force). Because this 2-body decay propagates directly through the spatial volume, its decay rate scales linearly with mass ($\Gamma \propto M^1$). States like the $\Delta(1232)$ baryon and the $\rho(770)$ meson dissipate almost instantly at this baseline rate.
-    
-    \item \textbf{Gear 3: Electromagnetic Resistance ($10^{-16}$ -- $10^{-21}$ s).} 
-    \textit{The $M^3$ Scaling.} If a state must emit a photon to shed latency, it interacts with the 2D topological boundary ($\chi=2$). This imposes the geometric vacuum impedance ($\alpha \approx 1/137$) and forces the decay to scale volumetrically as $\Gamma \propto M^3$. Particles like the $\pi^0$ and $J/\psi$ are locked in this gear. By anchoring the scaling to the $\pi^0$, the $M^3$ geometry predicts the $J/\psi$ lifetime to within $0.2\%$, spanning 4 orders of magnitude without arbitrary tuning parameters.
-    
-    \item \textbf{Gear 2: The Weak Bottleneck ($10^{-12}$ -- $10^{-13}$ s).} 
-    \textit{The $M^5$ Scaling.} If a state changes its internal flavor identity, it must push its information through the 1D chiral $W$-boson interface. Forcing a massive 3-body dissipation through a 1D chiral aperture incurs a massive geometric choke-point, forcing the decay to scale as $\Gamma \propto M^5$. The $\tau$ lepton, $c$ quark, and $b$ quark reside here.
-    
-    \item \textbf{Gear 1: Geometric Suppression ($10^{-6}$ -- $10^{3}$ s).} 
-    \textit{Fractional Routing.} If a state traverses the 1D Weak interface \textit{and} crosses an orthogonal generational boundary (CKM suppression), or if its exit payload occupies nearly all of the available phase space (kinematic truncation), it hits the absolute floor of network transmission. The Muon, the Kaons, the $\pi^\pm$, and the free Neutron are severely bottlenecked by these geometric fractional routings.
-\end{enumerate}
-
-\paragraph{The Yoctosecond Limit: The Top Quark Breakdown}
-The geometric framework naturally predicts why the Top Quark is the only particle that decays before it can hadronize. The Top Quark sits at the absolute Volumetric Capacity Ceiling of the local node. Because its mass ($172.5$ GeV) exceeds the $W$-boson interface capacity ($80.4$ GeV), it physically shreds the 1D Weak bottleneck, emitting a real $W$-boson. Because this transition is a 2-body emission of a real massive gauge boson, it scales identically to the $M^3$ Gear 3 mechanics. Applying the $M^3$ scaling and truncating the phase-space for the massive $W$-boson predicts the Top Quark lifetime to within $5\%$ of the experimental value, confirming that the Top decays via a forced bulk capacity overflow.
-
-
-
-
-
-
-
-
-
-\subsection{Predicting Exact Lifetimes: The Network Bandwidth Limit}
-
-By treating the Muon as the baseline structural aperture for the Weak Interaction ($W$-boson) network, the lifetimes of all other particles can be calculated directly by scaling their phase-space volume ($M^{-5}$) and applying the strict geometric routing constraints derived in our previous work. 
-
-Crucially, the number of decay channels available to a particle is not a phenomenological fit; it is strictly dictated by the combinatorics of the $E_8$ substrate. The Tau lepton possesses exactly $5$ exit channels ($e$, $\mu$, and $3$ colors for the $u\bar{d}$ quarks). The Bottom quark possesses exactly $9$ exit channels. We define the decay rate ($\Gamma$) as:
-
-\begin{equation}
-    \Gamma = \Gamma_{\mu} \cdot \left(\frac{M}{m_\mu}\right)^5 \cdot |V_{ij}|^2 \cdot (\text{Exit Channels}) \cdot \eta_{\text{phase}}
-\end{equation}
-
-Where $|V_{ij}|^2$ is the exact geometric CKM routing impedance, and $\eta_{\text{phase}}$ is the kinematic phase-space truncation for states where the exit payload occupies a massive fraction of the dissipation volume (such as the Kaon and Neutron). 
-
-As shown in Table \ref{tab:lifetimes}, this pure geometric and combinatorial scaling successfully captures the lifetime spectrum spanning 18 orders of magnitude. 
-
-\CatchFileBetweenTags{\MuonLifetimePred}{particles.tex}{MuonLifetimePred}
-\CatchFileBetweenTags{\MuonLifetimeExp}{particles.tex}{MuonLifetimeExp}
-\CatchFileBetweenTags{\TauLifetimePred}{particles.tex}{TauLifetimePred}
-\CatchFileBetweenTags{\TauLifetimeExp}{particles.tex}{TauLifetimeExp}
-
-\CatchFileBetweenTags{\BottomLifetimePred}{particles.tex}{BottomLifetimePred}
-\CatchFileBetweenTags{\BottomLifetimeExp}{particles.tex}{BottomLifetimeExp}
-\CatchFileBetweenTags{\CharmLifetimePred}{particles.tex}{CharmLifetimePred}
-\CatchFileBetweenTags{\CharmLifetimeExp}{particles.tex}{CharmLifetimeExp}
-
-\CatchFileBetweenTags{\KaonKplusLifetimePred}{particles.tex}{Kaon_KplusLifetimePred}
-\CatchFileBetweenTags{\KaonKplusLifetimeExp}{particles.tex}{Kaon_KplusLifetimeExp}
-\CatchFileBetweenTags{\NeutronLifetimePred}{particles.tex}{NeutronLifetimePred}
-\CatchFileBetweenTags{\NeutronLifetimeExp}{particles.tex}{NeutronLifetimeExp}
-
-
-\begin{table}[h]
+The benchmark multiplicities $5$ and $9$ do not include a derivation of hadronic amplitudes or radiative corrections. Table~\ref{tab:lifetimes} retains the original rounded numbers, with their nonuniform accuracy exposed. These are mean lifetimes, not half-lives.
+\begin{table*}[t]
 \centering
-\caption{Particle Lifetimes derived from Network Transition Bandwidth.}
+\caption{Illustrative draft benchmarks. Heavy-quark-sector comparisons require a specified hadron species and mass convention before precision testing. References are the rounded draft inputs, not a new experimental fit.}
 \label{tab:lifetimes}
-\renewcommand{\arraystretch}{1.3}
-\begin{tabular}{lccccc}
-\toprule
-\textbf{State} & \textbf{Payload ($M$)} & \textbf{Routing Imp. ($|V_{ij}|^2$)} & \textbf{Exit Channels} & \textbf{Predicted $\tau$ (s)} & \textbf{Target $\tau$ (s)} \\
-\midrule
-Electron & $0.511$ MeV & $1.0$ & $0$ & Stable & Stable \\
-Proton & $938.2$ MeV & $1.0$ & $0$ & Stable & Stable \\
-\midrule
-Muon ($\mu$) & $105.6$ MeV & $1.0$ (Anchor) & $1$ & $2.20 \times 10^{-6}$ & $2.19 \times 10^{-6}$ \\
-Tau ($\tau$) & $1776.9$ MeV & $1.0$ & $5$ & $3.27 \times 10^{-13}$ & $2.90 \times 10^{-13}$ \\
-Bottom ($b$) & $4183.0$ MeV & $|V_{cb}| \approx 0.041$ & $9$ & $1.49 \times 10^{-12}$ & $1.53 \times 10^{-12}$ \\
-\midrule
-Charm ($c$) & $1273.0$ MeV & $|V_{cs}| \approx 0.974$ & $5^*$ & $1.84 \times 10^{-12}$ & $1.05 \times 10^{-12}$ \\
-Kaon ($K^+$) & $493.6$ MeV & $|V_{us}| \approx 0.224$ & $1^*$ & $3.25 \times 10^{-8}$ & $1.24 \times 10^{-8}$ \\
-Neutron ($n$) & $1.29$ MeV & $|V_{ud}| \approx 0.974$ & $1^*$ & $8.42 \times 10^{2}$ & $8.77 \times 10^{2}$ \\
-\bottomrule
-\multicolumn{6}{l}{\footnotesize $^*$ Subject to kinematic phase-space truncation ($\eta_{\text{phase}} < 1$) due to massive exit states.}
+\begin{tabular}{lrrr}\toprule
+State or sector & Model $\tau$ (s) & Draft reference $\tau$ (s) & Model/reference \\\midrule
+Muon & $2.20\times10^{-6}$ & $2.19\times10^{-6}$ & $1.005$ \\
+Tau & $3.27\times10^{-13}$ & $2.90\times10^{-13}$ & $1.128$ \\
+$b$ sector & $1.49\times10^{-12}$ & $1.53\times10^{-12}$ & $0.974$ \\
+$c$ sector & $1.84\times10^{-12}$ & $1.05\times10^{-12}$ & $1.752$ \\
+$K^+$ & $3.25\times10^{-8}$ & $1.24\times10^{-8}$ & $2.621$ \\
+Neutron & $8.42\times10^2$ & $8.77\times10^2$ & $0.960$ \\\bottomrule
 \end{tabular}
-\end{table}
+\end{table*}
 
-\paragraph{The Yoctosecond Limit: The Top Quark Breakdown}
-The geometric framework naturally predicts why the Top Quark is the only particle that decays before it can hadronize. The Top Quark sits at the absolute Volumetric Capacity Ceiling of the local node ($\Delta^3$). At this extreme tier, the $M^5$ dissipation pressure is so immense that the transition flux exceeds the characteristic timescale of the strong interaction ($\Lambda_{QCD}^{-1}$). The latency of the Top protocol is so destructive to the local Entropic Action that the network shreds the protocol through the W-boson interface in $\sim 5 \times 10^{-25}$ seconds—faster than the surrounding gluon links can synchronize to form a bound color state.
+\paragraph{Lepton universality check.} For the leptonic modes the coefficient of the fifth power is not a free benchmark. Given the spin-averaged V-A contact amplitude, the covariant form of the neutrino-pair integral and the massless phase-space measure, $\Gamma(\ell\to e\nu\bar\nu)=G_F^2m_\ell^5/(192\pi^3)$ with the spectrum $2x^2(3-2x)$; Lean checks each step of this reduction (\texttt{MuonRate.muon\_rate}, \texttt{spectrum\_form}). The amplitude itself follows from the trace algebra of the Dirac matrices reconstructed from Paper~II's Hamiltonian: $\sum_{\mu\nu}\operatorname{Tr}[\not a\gamma^\mu\not b\gamma^\nu(1-\gamma^5)]\operatorname{Tr}[\not c\gamma_\mu\not d\gamma_\nu(1-\gamma^5)]=64(a\cdot c)(b\cdot d)$, which gives $64G_F^2(p\cdot\bar k)(p_e\cdot k)$ after the muon spin average (Paper~II, \texttt{VATrace.muon\_amplitude}; \texttt{MuonAmplitude.amplitude\_matches}). For the spin sums, $\not p\gamma^0$ is Hermitian, satisfies $(\not p\gamma^0)^2=2p^0\,\not p\gamma^0$ for $p^2=0$, is annihilated by $\not p$ and has trace $4p^0$, so it is $2p^0$ times the rank-two projector onto the massless solutions (\texttt{MuonAmplitude.spin\_projector}, \texttt{spin\_solutions}, \texttt{spin\_hermitian}, \texttt{spin\_trace}); identifying it with $\sum_s u_su_s^\dagger$ for any orthonormal basis of the solutions, massive or massless, is proved in Paper~II's research module \texttt{SpinorCompleteness} ($\sum u\bar u=\not p+m$, $\sum v\bar v=\not p-m$). The muon is massive, but its mass term drops out of the V--A trace exactly, because $(1-\gamma^5)\gamma^\nu(1-\gamma^5)=0$ (\texttt{MassiveMuon.chiral\_sandwich}, \texttt{massive\_amplitude}); $m_\mu$ enters the rate only through the kinematics. With one $G_F$ for every lepton (the shared electroweak reference of Paper~III), the ratio of the tau and muon leptonic widths cancels $G_F$ and $192\pi^3$ (\texttt{TauLifetime.rate\_ratio}), so $\tau_\tau=\tau_\mu(m_\mu/m_\tau)^5B(\tau\to e\nu\bar\nu)$. With the derived lepton masses, the measured $\tau_\mu$ and $B_e=17.82\%$, this gives $291.15$--$291.17$~fs at tree level (\texttt{tau\_lifetime\_tree}); the standard small corrections, entered as a factor in $[0.9995,0.9997]$, place it $0.8$--$1.0\sigma$ above the measured $290.3\pm0.5$~fs (\texttt{tau\_lifetime\_pull}). This replaces the tau benchmark row of Table~\ref{tab:lifetimes} for the leptonic channel. It does not decide the $2\sigma$ tension of the tau mass formula: that tension moves $\tau_\tau$ by only about $0.15$~fs.
 
+\subsection{Interaction classes and proposed routing gears}
+Strong, electromagnetic and weak processes provide qualitative scales, not four exact disjoint lifetime bands. Widths depend on amplitudes, thresholds, masses and exclusive channel sums. A power $M^n$ is a conditional scaling law, not a universal interface classifier. Prompt $W$, $Z$ and top decays should not be classified as strong merely because their lifetimes are short. The proposed routing gears remain organizing hypotheses to be tested against a specified interaction law.
 
-\subsection{The Neutron Lifetime Anomaly: Environmental Phase-Space Dilation}
+\subsection{Weak-boson and environmental ratios}
+The geometric assignment $\sigma/(\sigma+1)$ gives $5/6$ at the baseline. Identifying this count with $\Gamma_W/\Gamma_Z$ is a separate phenomenological hypothesis; it does not calculate electroweak partial widths.
 
-Precision measurements of the neutron mean lifetime exhibit a persistent $\sim 4\sigma$ anomaly depending on the experimental method used:
-\begin{itemize}
-    \item \textbf{Bottle Experiments (Storage):} $\tau_{bottle} = 877.75 \pm 0.28$ s.
-    \item \textbf{Beam Experiments (Flight):} $\tau_{beam} = 888.0 \pm 2.0$ s.
-\end{itemize}
-Standard physics cannot explain why neutrons appear to live roughly $10$ seconds longer when propagating in a vacuum than when confined in a magnetic or material bottle.
-
-In Informational Energetics, decay is the geometric re-routing of a state's payload (for the neutron, the $1.29$ MeV $Q$-value) into the available phase-space. This phase-space is sensitive to the \textbf{Geometric Boundary Conditions} of the environment.
-
-\begin{enumerate}
-    \item \textbf{Confined State (Bottle):} The neutron continuously interacts with the container walls. This environmental pressure structurally reinforces the particle's topological boundary ($\chi=2$), locking the decay aperture to its nominal geometric rate.
-    
-    \item \textbf{Free State (Beam):} The neutron propagates in a pure vacuum. Lacking boundary reinforcement, the geometric boundary condition relaxes, and the decay phase space is dilated by the \textbf{Symmetry-Depth Ratio}. 
-\end{enumerate}
-
-The vacuum impedance suppresses the decay width by the ratio of the boundary leakage ($\chi/\sigma$) to the temporal resonance depth ($\Delta$). We calculate this exact lifetime dilation factor ($\mathcal{D}$) as:
+For the draft's neutron environment model, retain
 \begin{equation}
-\mathcal{D} = \frac{\Delta}{\Delta - (\chi/\sigma)}
+\mathcal D=\frac{\Delta}{\Delta-\chi/\sigma}
+=\frac{43}{43-2/5}=\frac{215}{213}>1.
 \end{equation}
-Using the fundamental lattice invariants ($\Delta=43$, $\chi=2$, $\sigma=5$):
-\begin{equation}
-\mathcal{D} = \frac{43}{43 - 0.4} = \frac{43}{42.6} \approx \mathbf{1.00939}
-\end{equation}
+If $\Gamma_{\rm beam}=\Gamma_{\rm bottle}/\mathcal D$ is stipulated, then $\tau_{\rm beam}=\mathcal D\tau_{\rm bottle}$. Lean checks this reciprocal relation. The draft input $877.75$ s gives $885.9918$ s. This rescaling is not a demonstration that environmental width changes cause the beam--bottle discrepancy; that claim needs a microscopic mechanism, controls and an independent uncertainty analysis.
 
-Applying this environmental dilation to the strictly confined Bottle measurement predicts the exact Beam lifetime:
-\begin{equation}
-\tau_{beam} = \tau_{bottle} \times \mathcal{D} = 877.75 \text{ s} \times 1.00939 \approx \mathbf{886.0 \text{ s}}
-\end{equation}
-
-This parameter-free geometric prediction bridges the anomalous gap, landing well within $1\sigma$ of the experimental beam average ($888.0 \pm 2.0$ s). The neutron lifetime discrepancy is not an experimental error; it is the direct observation of the vacuum's geometric impedance dilating the phase-space of unconfined topological defects.
+\subsection{Formal scope}
+The Lean project checks conserved-label routing, finite latency descent, survival identities under a constant hazard, partial-width addition, branching normalization, dimensional and reference-width scaling, and the environmental factor. It does not derive amplitudes, a particle spectrum, confinement, an exact four-gear classification or a quantum Yang--Mills mass gap from $E_8$.

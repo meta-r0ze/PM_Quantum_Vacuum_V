@@ -1,61 +1,27 @@
-\section{What does it mean for a systems to decay}
-Lets introduce the universal mechanics of how any system degrades, decays, or transitions when it can no longer sustain its internal complexity.
-
-1. The PM Axiom of Decay (The Variational Drag $\Phi_{\text{drag}}$)A system persists only as long as its Margin ($\mathcal{M}$) remains above insolvency. Every state transition incurs an Entropic Toll ($\xi \ge k_B T \ln 2$)—the Landauer cost of processing or erasing state updates.If a system's internal complexity ($\mathbf{K}$) or its processing frequency ($\lambda$) spikes such that its continuous thermodynamic drag exceeds its hardware capacity ($\Phi_{\text{drag}} > CAP$), the system hits The BSD/Landauer Ledger Crisis. It can no longer balance its continuous dissipation against its discrete hardware allocations without experiencing Causal Aliasing (information erasure/system rot).
-
-2. The Solution: Structural Shedding (Decay as Re-Routing)To survive a ledger crisis, the Principle of Least Entropic Action forces the system to undergo Structural Shedding. It dumps its high-latency internal complexity ($\mathbf{K}$) by re-routing its payload into a lower-complexity, more efficient protocol. Stability (Topological Lock): A state is stable if, and only if, it is a Topological Ground State—meaning no simpler protocol exists that can route its fundamental payload without violating the system's core boundary constraints ($Inside \neq Outside$).Instability (The Phase Space Volume): If a lower-latency protocol exists, the system will decay. The rate of decay ($\Gamma$) is strictly bounded by the Interface Aperture ($\mathcal{A}$) of the communication link and the available Dissipation Volume ($\mathcal{V}$) of the lower-tier destination.
-
-%In Section II, you introduce Φ drag. Make sure the narrative clearly distinguishes between Mass (processing latency) and Drag (the ongoing thermodynamic toll of maintaining that latency). If they are identical, collapse the terminology. If they are different, explain how a high-mass particle exerts drag on the surrounding E8  nodes.
-
-%The Explicit Definition of "Insolvency": You state that a system decays when its Margin (M) falls below insolvency (Φ drag >CAP). You need a brief, narrative section explaining what "insolvency" looks like geometrically on the E 8 lattice. Does it mean a literal geometric overlap where two protocols attempt to write to the same node (Causal Aliasing)? Define the exact digital pathology that triggers the "BSD/Ledger Crisis."
-
-
-\section{What It Means for a System to Decay}
-
-Any system that persists must process state transitions within finite hardware capacity. When its internal complexity or transition frequency exceeds this threshold, the system faces a Ledger Crisis: it can no longer balance continuous dissipation against discrete allocations without erasing information. This section formalizes the universal mechanics of how systems degrade, decay, or transition under this constraint.
-
-\subsection{The Thermodynamic Distinction: Mass vs. Drag}
-
-In Informational Energetics, \emph{mass} is the thermodynamic latency of a routing protocol---the static structural cost of maintaining a specific geometric configuration. \emph{Drag} is the ongoing toll: the continuous dissipation incurred as the system processes state transitions at frequency $\lambda$. 
-
-A system may possess high mass yet remain stable if its protocol is a Topological Ground State (no simpler route exists). Its drag is bounded and sustainable. Conversely, an overtone protocol---a higher-dimensional resonance of the same base structure---carries excess geometric residual that generates friction against the substrate. Its drag scales with both its structural complexity $\mathbf{K}$ and its processing frequency:
+\section{A Conditional Model of Decay}
+\label{sec:decay_model}
+\subsection{Latency, drag, and capacity}
+For a protocol $s$ with structural cost $K(s)$ and update frequency $f$, adopt
 \begin{equation}
-\Phi_{\text{drag}} = \xi \cdot \mathbf{K} \cdot \lambda
+\Phi_{\rm drag}=\xi K(s)f.
 \end{equation}
-where $\xi \ge k_B T \ln 2$ is the Landauer cost per state transition. When $\Phi_{\text{drag}}$ exceeds the local hardware capacity $CAP$, the system hits insolvency.
+The capacity compared with this drag must have the same units. A Landauer bound concerns logically irreversible erasure under specified thermodynamic conditions; it is not a universal cost for every reversible update. Interpreting excess demand as a collision of lattice writes requires a scheduling and encoding model, and does not itself determine a decay rate.
 
-\subsection{The Ledger Crisis: Insolvency as Geometric Pathology}
-
-On a discrete substrate, insolvency is not a gradual decline but a specific digital pathology. Each node possesses finite channel capacity---on the $E_8$ substrate, $\nu = 16$ active chiral channels per clock cycle. When a protocol's state transitions demand concurrent writes that oversubscribe these channels, distinct causal histories collide in the same temporal slot. The node lacks residual bandwidth to resolve the ambiguity. This is \emph{Causal Aliasing}: the collapse of distinguishable states into an indistinguishable superposition, resulting in immediate information erasure.
-
-The Ledger Crisis is therefore a hardware collision. The system cannot ``borrow'' capacity; it cannot defer state updates. It must either shed complexity or dissolve into the vacuum noise floor.
-
-\subsection{Structural Shedding: Decay as Deterministic Re-Routing}
-
-To survive a Ledger Crisis, the Principle of Least Entropic Action forces the system to undergo Structural Shedding. The high-latency payload is fragmented and rerouted into lower-complexity protocols that fit within available channel capacity. This is not stochastic collapse; it is deterministic network re-routing governed by two strict bounds:
-
-\begin{itemize}
-    \item \textbf{Interface Aperture ($\mathcal{A}$):} The geometric bandwidth of the communication link through which complexity must exit. A narrow aperture (e.g., the 1D chiral W-boson channel) bottlenecks the decay; a wide aperture (e.g., the 3D color bulk) permits rapid dissipation.
-    \item \textbf{Dissipation Volume ($\mathcal{V}$):} The available phase space of the lower-tier destination---the channel capacity and temporal bandwidth of the simpler protocol receiving the shed complexity.
-\end{itemize}
-
-The decay rate is strictly bounded by the slower of these two constraints:
+\subsection{Allowed transitions and stability}
+Let $L(s)\in\mathbb N$ be latency, $q(s)$ a conserved label, and $s\to t$ an allowed transition. Assume
 \begin{equation}
-\Gamma \propto \mathcal{A}^2 \cdot \mathcal{V}
+s\to t\ \Longrightarrow\ L(t)<L(s),\qquad q(t)=q(s).
 \end{equation}
+The label describes the entire exit cohort, not necessarily each daughter. A terminal protocol has no outgoing transition. A latency minimum within its label class is terminal, and a sequence of strict reductions has at most $L(s_0)$ steps. A lower-latency configuration need not be reachable: amplitudes, selection rules and thresholds are additional conditions. These routing assumptions alone do not prove absolute electron or proton stability.
 
-\subsection{Stability: The Topological Lock}
-
-A state is stable if, and only if, it is a \emph{Topological Ground State}: no simpler protocol exists that can route its fundamental payload without violating the system's core boundary constraints ($\text{Inside} \neq \text{Outside}$). 
-
-The electron is the ground-state singlet protocol; no simpler route preserves its $Q = -1$ boundary flux. The proton is the ground-state fractional protocol; no simpler configuration closes the 3D color bulk. Because no lower-tier destination exists for their respective payloads, they are topologically locked---even under Ledger Crisis, the substrate has no valid re-routing target. They persist indefinitely.
-
-Instability arises only when a lower-latency protocol exists within the same topological class. The muon decays to the electron because both are $Q = -1$ boundary-coupled singlets; the muon is simply a higher-dimensional overtone with excess geometric residual that generates unsustainable drag.
-
-\subsection{The Illusion of Stochasticity}
-
-If decay is a deterministic re-routing event triggered by Ledger Crisis, why does it appear fundamentally probabilistic---yielding a half-life---to macroscopic observers?
-
-The substrate is an active, dynamic network. A heavy protocol sits exactly at the threshold of insolvency. However, the exact moment the local capacity overflows depends on the ambient noise floor of the vacuum. Background network traffic---vacuum fluctuations---constantly washes over the localized state. Decay occurs when a specific local geometric fluctuation temporarily pushes the node's capacity over its strict finite limit, triggering the deterministic re-routing algorithm. Because these vacuum fluctuations are pseudo-randomly distributed across the macroscopic lattice, the exact arrival time of the fatal capacity spike follows a Poisson distribution. 
-
-Thus, decay is strictly deterministic at the substrate scale, but emerges as a statistical probability---a half-life---at the macroscopic level, perfectly analogous to packet timeout probabilities in congested digital networks.
+\subsection{Widths, rates and waiting times}
+Write $\Gamma$ for an energy width and $\gamma=\Gamma/\hbar$ for a rate. For $\Gamma>0$,
+\begin{equation}
+\tau=\frac{1}{\gamma}=\frac{\hbar}{\Gamma}.
+\end{equation}
+A stationary, memoryless hazard gives survival
+\begin{equation}
+S(t)=e^{-\gamma t},\quad S(t+u)=S(t)S(u),\quad
+ t_{1/2}=\frac{\log 2}{\gamma}.
+\end{equation}
+Poisson event counts have exponential waiting times; the waiting time itself is not Poisson-distributed. Deterministic routing with unspecified background traffic does not establish this law. Deriving a stationary hazard from microscopic dynamics remains an open task.
