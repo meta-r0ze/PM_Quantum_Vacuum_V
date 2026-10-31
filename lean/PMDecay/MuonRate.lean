@@ -9,16 +9,19 @@ import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 
 1. **Amplitude.** The spin-averaged V-A contact amplitude is `64 G_F² (p·k̄)(p_e·k)`, with `p` the
    muon, `p_e` the electron, `k, k̄` the two neutrinos (Paper II supplies the contact limit and the
-   vertex factor; the Dirac trace is not formalized here).
+   vertex factor; `SpinorRateBridge` imports the actual bilinear spin-sum proof).
 2. **Covariance of the neutrino pair.** The two-neutrino phase-space integral of `k^α k̄^β` depends
-   only on `q = k + k̄`, so it is `A g^{αβ} q² + B q^α q^β` (the persistence closure Covariance).
+   only on `q = k + k̄`, so it is `A g^{αβ} q² + B q^α q^β`. `PairIsotropy`
+   derives this form in the pair rest frame from explicit angular symmetries. Transport to
+   other frames and identification of the physical measure remain inputs.
 3. **Massless phase-space measure.** Lorentz-invariant measure `d³k/((2π)³ 2E)`.
 
 What is proved:
 
 * `pair_kinematics`: for massless `k, k̄`, `q² = 2 k·k̄` and `(q·k)(q·k̄) = (q²)²/4`.
 * `tensor_coeffs`: contracting with `g` and with `qq` gives `A = Φ₂/12`, `B = Φ₂/6`.
-* `two_body`: the massless two-body volume is `Φ₂ = 1/(8π)`, so `A = 1/(96π)`, `B = 2A`.
+* `two_body`: the supplied solid-angle and delta-Jacobian factors simplify to
+  `Φ₂ = 1/(8π)`, so `A = 1/(96π)`, `B = 2A`; this is not a constructed delta-function measure.
 * `rest_frame`: in the muon rest frame, the contracted amplitude is
   `64 G_F² m² E (3m − 4E)/(96π)`.
 * `electron_measure`: `4π E²/((2π)³ 2E) = E/(4π²)`.

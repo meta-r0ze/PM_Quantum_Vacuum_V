@@ -19,8 +19,9 @@ of `p̸ u = 0`. Proved here for real `p` with `p² = 0`:
 * `spin_solutions`: `p̸ (p̸γ⁰) = 0`, so its range consists of massless solutions.
 * `spin_trace`: `Tr(p̸γ⁰) = 4p⁰`, so the projector has rank `2`, the two spin states.
 So `p̸γ⁰/(2p⁰)` is a rank-2 orthogonal projector onto the massless solutions. Summing `u u†` over
-any orthonormal pair of solutions normalized to `u†u = 2p⁰` gives `p̸γ⁰`; that last step is
-standard linear algebra and is not formalized.
+any complete orthonormal family of solutions normalized to `u†u = 2p⁰` gives `p̸γ⁰`.
+Paper II now proves that completeness step; `SpinorRateBridge` uses it to obtain the real
+spin-averaged amplitude from actual Dirac bilinears, including the massive muon.
 
 Remaining input: the identification of the vertex with the charged current.
 -/

@@ -23,6 +23,15 @@
     {
       "type": "path",
       "scope": "",
+      "name": "pm_dynamics",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "../../PM-4-Dynamics/lean",
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "scope": "",
       "name": "pm_action",
       "manifestFile": "lake-manifest.json",
       "inherited": true,

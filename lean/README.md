@@ -1,7 +1,8 @@
 # PM-5-Decay: routing and decay formalization
 
 Lean 4.34.1, with mathlib pinned through the sibling PM-1-Arch/lean package.
-Keep the paper directories as siblings. With elan available, run `./check.sh`.
+Keep Papers I–V as sibling directories. Paper V now directly requires Paper IV
+for its complete proposed PMNS matrix, as well as Papers I and III. With elan available, run `./check.sh`.
 The initial dependency setup may need the mathlib cache; this Mac reuses the
 existing cache and needs no additional installation. `.lake/` is ignored.
 
@@ -14,6 +15,17 @@ existing cache and needs no additional installation. `.lake/` is ignored.
 | `PMDecay/Widths.lean` | Positive lifetimes, reciprocal width scaling, branching normalization and positivity, equal-channel multiplicity, reference-width positivity, phase suppression lengthening lifetimes, exact neutron factor 215/213 and its conditional lifetime relation. |
 | `PMDecay/SubstrateBridge.lean` | Conditional scaling bridge to the earlier baseline; positive E8-invariant candidate widths and an exact cubic/quintic independence witness. |
 | `PMDecay/MassScaling.lean` | Kinematic dimension versus phase-space mass dimension, canonical fermion and four-fermion coupling dimensions, tree-level mediator matching algebra, the fifth-power exponent, mass rescaling and unit covariance, and the combined scaling factors. |
+| `PMDecay/WeakMatching.lean` | Reference mediator-mass/contact-matching algebra; spectrum normalization and first moment. |
+| `PMDecay/MuonRate.lean` | Pair kinematics, conditional tensor coefficients, supplied measure-factor arithmetic, rest-frame contraction, actual scalar spectrum integration and `G²m⁵/(192π³)`. |
+| `PMDecay/MuonAmplitude.lean`, `MassiveMuon.lean` | Real-momentum trace convention bridge, massless projector facts and massive-muon chiral cancellation. |
+| `PMDecay/SpinorRateBridge.lean` | Paper II's actual bilinear amplitude and complete spin sums give the real spin-averaged squared amplitude used by `MuonRate`. |
+| `PMDecay/PairIsotropy.lean` | Sign-flip and axis-interchange invariance of an explicit linear angular average force the first/second moments and the full rest-frame massless-pair tensor. |
+| `PMDecay/InclusiveMixing.lean` | Squared exclusive-amplitude mixing weights; complete inclusive cancellation for unitary mixing and equal kinematics, bounds for unequal kinematics, and specialization to Paper IV's PMNS matrix and the muon width. |
+| `PMDecay/ScalingObligations.lean` | First-order kinetic source and conditional contact-width scaling with dimension one. |
+| `PMDecay/TauLifetime.lean` | Leptonic width/lifetime ratio and comparisons using stated measured calibration, branching fraction and correction factor. |
+| `PMDecay/CompositeMasses.lean`, `LeptonMasses.lean`, `QuarkMasses.lean` | Supplied mass-ledger arithmetic and fixed benchmark comparisons, including tensions. |
+| `PMDecay/ChargeProtocols.lean` | Packet charge values, charge integrality and colourless-carrier equivalence. |
+| `PMDecay/NeutrinoContext.lean` | Fixed-data exclusion of the proposed factor-six contextual prescription. |
 
 ## Internal M^5 derivation program
 
@@ -30,9 +42,11 @@ II's Hamiltonian is first order (`momentum_linear`, `dispersion`), `G_F = 1/(√
 `rate_dimension_one`); `obligations_met` checks `(3/2, −2, 5)`. The action's dimension count stays
 an input.
 
-The remaining internal work is to derive the transition/current operator,
-mediator limit, continuum normalization and counting/measure rule from the
-substrate. No external weak-interaction theorem is used as a substitute.
+The remaining internal work is to identify the substrate states, physical current and
+event costs with the supplied contact vertex, and justify the continuum normalization
+and counting/measure rule. Upstream current, mediator and spinor theorems supply
+conditional mathematical bridges; they do not select these physical identifications.
+See `REVIEW-AND-NEXT.md` for the remaining work in dependency order.
 
 ### External comparison target
 
@@ -52,11 +66,13 @@ daughters (or fixed mass ratios), and fixed dimensionless couplings.
 5. The squared amplitude scales as G_F² M⁴. Parent normalization contributes
    M^-1, giving G_F² M^5.
 
-Lean checks the dimension bookkeeping, matching and rescaling algebra. It does
-not construct the spinor amplitude or integrate Lorentz-invariant phase space;
-192π³ is the known massless V-A coefficient; `MuonRate` derives it from the amplitude, covariance and the phase-space measure.
-The spectrum's nonnegativity and primitive endpoint values are simple scalar
-checks; no formal phase-space integration is claimed.
+Lean now checks more than dimensional bookkeeping: Paper II constructs the bilinear
+spinor amplitude, and `SpinorRateBridge` supplies it in Paper V's real conventions.
+`MuonRate.muon_rate` performs the scalar energy-spectrum integral. `192π³` follows
+from this amplitude and the supplied phase-space normalization factors. A complete
+Lorentz-invariant delta-function phase-space measure has **not** been constructed.
+`PairIsotropy` derives the tensor in the pair rest frame from angular symmetry;
+its physical measure and transport to other frames remain assumptions.
 
 ## Assumption boundary
 
@@ -84,12 +100,15 @@ including private helpers. Only `propext`, `Classical.choice`, and `Quot.sound`
 are allowed as transitive axioms. Physical assumptions are definitions or
 hypotheses; there are no custom physical axioms or admitted proofs.
 
-## Verification on 2026-10-27
+## Verification
 
-`./check.sh` completed successfully: 3218 build jobs and a strict audit of
-123 PMDecay declarations. Only the standard three allowed axioms occur
-transitively. The manuscript was compiled separately and its rendered pages
-were inspected.
+The pinned `./check.sh` runs the default build, the strict transitive axiom audit,
+and a dependency audit excluding Paper VI. The latter prevents a downstream
+cosmology assumption from being used to prove a decay result.
+
+On 2026-10-30, the pinned `./check.sh` passed: **4168 build jobs**, a strict
+audit of **364 PMDecay declarations**, and no Paper VI imports. Only
+`propext`, `Classical.choice` and `Quot.sound` occur as transitive axioms.
 
 ## Weak matching from Papers II and III
 
@@ -132,8 +151,10 @@ measure. Proved: massless pair kinematics (`pair_kinematics`), tensor coefficien
 (`rest_frame`), the electron measure, `dΓ/dE` (`rate_density`), the integral (`muon_rate`), and the
 spectrum `2x²(3−2x)` in `x = 2E/m` (`spectrum_form`). The amplitude itself is derived in Paper II's `VATrace` (trace algebra of the actual Dirac matrices,
 `muon_amplitude`) and matched to `MuonRate`'s conventions in `MuonAmplitude.amplitude_matches`; the
-massless spin sums are reduced to the projector properties of `p̸γ⁰` (`spin_projector`,
-`spin_solutions`, `spin_hermitian`, `spin_trace`).
+older massless projector facts remain available. `SpinorRateBridge.spin_averaged` now
+uses complete on-shell spinor families and the actual bilinear amplitude, with the
+initial spin average and massive-muon cancellation included. The supplied complete
+orthonormal kernel bases, vertex and external-state interpretation remain hypotheses.
 
 ## Tau lifetime (`TauLifetime`)
 

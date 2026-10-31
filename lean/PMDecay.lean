@@ -15,3 +15,7 @@ import PMDecay.CompositeMasses
 import PMDecay.LeptonMasses
 import PMDecay.QuarkMasses
 import PMDecay.ChargeProtocols
+
+import PMDecay.SpinorRateBridge
+import PMDecay.InclusiveMixing
+import PMDecay.PairIsotropy
