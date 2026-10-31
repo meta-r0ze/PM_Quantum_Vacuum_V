@@ -20,3 +20,5 @@ import PMDecay.SpinorRateBridge
 import PMDecay.InclusiveMixing
 import PMDecay.PairIsotropy
 import PMDecay.WExchangeRate
+import PMDecay.DecayLaw
+import PMDecay.ExternalStates
