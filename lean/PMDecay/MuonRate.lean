@@ -12,8 +12,10 @@ import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
    vertex factor; `SpinorRateBridge` imports the actual bilinear spin-sum proof).
 2. **Covariance of the neutrino pair.** The two-neutrino phase-space integral of `k^α k̄^β` depends
    only on `q = k + k̄`, so it is `A g^{αβ} q² + B q^α q^β`. `PairIsotropy`
-   derives this form in the pair rest frame from explicit angular symmetries. Transport to
-   other frames and identification of the physical measure remain inputs.
+   derives this form in the pair rest frame from explicit angular symmetries, and
+   `PairTransport` constructs an actual average, transports it to every future timelike `q`
+   and recovers `rate_density` from it (`PairTransport.muon_density`). The value `Φ₂ = 1/(8π)`
+   of the physical measure remains an input.
 3. **Massless phase-space measure.** Lorentz-invariant measure `d³k/((2π)³ 2E)`.
 
 What is proved:

@@ -19,6 +19,7 @@ import PMDecay.ChargeProtocols
 import PMDecay.SpinorRateBridge
 import PMDecay.InclusiveMixing
 import PMDecay.PairIsotropy
+import PMDecay.PairTransport
 import PMDecay.WExchangeRate
 import PMDecay.DecayLaw
 import PMDecay.ExternalStates
