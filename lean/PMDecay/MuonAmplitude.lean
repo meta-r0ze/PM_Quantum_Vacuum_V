@@ -23,7 +23,8 @@ any complete orthonormal family of solutions normalized to `u†u = 2p⁰` gives
 Paper II now proves that completeness step; `SpinorRateBridge` uses it to obtain the real
 spin-averaged amplitude from actual Dirac bilinears, including the massive muon.
 
-Remaining input: the identification of the vertex with the charged current.
+`WExchangeRate` connects the contact vertex to Paper II's charged-current W exchange.
+Identifying that exchange with the substrate's physical decay interaction remains an input.
 -/
 
 noncomputable section

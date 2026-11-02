@@ -4,7 +4,7 @@ import PMDecay.MuonAmplitude
 /-!
 # The muon's mass drops out of the V−A trace
 
-The muon is massive, so its spin sum is `p̸ + m_μ` (Paper II research `SpinorCompleteness.spin_sums`),
+The muon is massive, so its spin sum is `p̸ + m_μ` (Paper II's `SpinorCompleteness.spin_sums`),
 not `p̸`. In the V−A amplitude the muon's spinor sits between two chiral vertices, and the mass term
 is killed there by chirality:
 

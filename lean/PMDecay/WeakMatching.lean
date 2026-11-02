@@ -20,8 +20,9 @@ now supply each ingredient:
 **The spectrum moments.** `MassScaling.spectrum` is the massless V-A electron spectrum.
 * `spectrum_normalized`: `∫₀¹ 2x²(3 - 2x) dx = 1`.
 * `spectrum_mean`: `∫₀¹ x · 2x²(3 - 2x) dx = 7/10`, the standard mean electron energy fraction.
-These are the integrals the earlier endpoint checks stood in for. The `192π³` coefficient (the
-full three-body phase-space integral with the V-A amplitude) is still not proved here.
+These are the integrals the earlier endpoint checks stood in for. `MuonRate` proves the
+`192π³` coefficient with the stated amplitude, flux and measure normalization; constructing
+the physical three-body phase-space measure from substrate counting remains open.
 -/
 
 noncomputable section

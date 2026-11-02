@@ -23,3 +23,7 @@ import PMDecay.PairTransport
 import PMDecay.WExchangeRate
 import PMDecay.DecayLaw
 import PMDecay.ExternalStates
+import PMDecay.MassiveExternalAmplitude
+import PMDecay.MassiveDaughterSpectrum
+import PMDecay.MassiveWidth
+import PMDecay.ContinuumPair
