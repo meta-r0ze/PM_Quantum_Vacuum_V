@@ -50,6 +50,27 @@ lemma a_b : (0.007297352562 : ℝ) < αe ∧ αe < 0.007297352563 :=
 lemma g_b : (137.035999212381397211 : ℝ) < αinv ∧ αinv < 137.035999212381397213 :=
   geometricIndex_bounds
 
+theorem pion0_pos : 0 < pion0 := by
+  unfold pion0
+  have hg := g_b
+  linarith
+
+theorem kaon0_pos : 0 < kaon0 := by
+  unfold kaon0
+  have hg := g_b; have hp := pi_b
+  linarith
+
+theorem kaonPlus_pos : 0 < kaonPlus := by
+  unfold kaonPlus
+  have hg := g_b; have hp := pi_b; have ha := a_b
+  have hs : (0.7071067811 : ℝ) < 1 / Real.sqrt 2 ∧ 1 / Real.sqrt 2 < 0.7071067812 := by
+    have h2 := Real.sq_sqrt (show (0 : ℝ) ≤ 2 by norm_num)
+    have hpos := Real.sqrt_pos.mpr (show (0 : ℝ) < 2 by norm_num)
+    constructor
+    · rw [lt_div_iff₀ hpos]; nlinarith
+    · rw [div_lt_iff₀ hpos]; nlinarith
+  nlinarith [hg.1, hp.1, ha.1, hs.1]
+
 theorem proton_value : 1836.152673444 < proton ∧ proton < 1836.152673445 := by
   have hp := pi_b; have ha := a_b
   unfold proton base zTol zMar

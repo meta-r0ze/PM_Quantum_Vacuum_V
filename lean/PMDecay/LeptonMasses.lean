@@ -47,6 +47,12 @@ theorem tau_value : tau = 3477 := by norm_num [tau]
 theorem tau_tension : -2.1 < (tau * me - 1776.93) / 0.09 ∧ (tau * me - 1776.93) / 0.09 < -2.0 := by
   rw [tau_value]; unfold me; constructor <;> norm_num
 
+/-- A direct two-sided enclosure of the charged pion in `m_e` units. -/
+theorem pionPlus_value : (273.1 : ℝ) < pionPlus ∧ pionPlus < 273.2 := by
+  have hg := g_b; have ha := a_b
+  unfold pionPlus
+  constructor <;> nlinarith [hg.1, hg.2, ha.1, ha.2]
+
 theorem pionPlus_mass : |(pionPlus * me - 139.57039) / 0.00018| < 0.2 := by
   have hg := g_b; have ha := a_b
   unfold pionPlus me

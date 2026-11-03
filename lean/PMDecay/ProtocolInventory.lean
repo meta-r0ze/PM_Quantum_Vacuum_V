@@ -33,6 +33,10 @@ inductive BaseProtocol
   | electron | up | down | neutrino
   deriving DecidableEq, Repr
 
+instance : Fintype BaseProtocol where
+  elems := {BaseProtocol.electron, BaseProtocol.up, BaseProtocol.down, BaseProtocol.neutrino}
+  complete := by intro x; cases x <;> simp
+
 /-- The geometric anchor a protocol uses to bridge chiral sectors. -/
 inductive Anchor
   | manifold   -- D = 4 spacetime anchor (quarks)
