@@ -1,4 +1,4 @@
-# Paper V: open work (todo)
+# PMElementaryParticles — open work (todo)
 
 Checked mathematics and the module map are in [`OVERVIEW.md`](OVERVIEW.md). This
 file is only what remains, split by what a Lean proof can close (**Part A**) and
@@ -124,7 +124,5 @@ excitation (`SubstrateBridge` contains distinct cubic and quintic laws). The
 remaining work is to select the physical law, not to hide its hypotheses.
 
 ## Verification
-**4203** build jobs, **zero** errors, **zero** warnings.
-**722** strict-audited PMElementaryParticles declarations.
-No Paper VI imports; permitted axioms `propext`, `Classical.choice`, `Quot.sound`.
-Run `./check.sh` for current numbers.
+
+Run `./check.sh`. No Paper VI imports; permitted axioms `propext`, `Classical.choice`, `Quot.sound`.

@@ -1,4 +1,4 @@
-# PM-5-Decay: Lean formalization
+# PMElementaryParticles — Paper V decay library
 
 Lean 4 proofs for *Persistence Mechanics V: Decay as a Conditional Routing Model*.
 Paper V applies Paper II's shared dynamics and Paper IV's flavour input to an
@@ -42,7 +42,11 @@ substrate, and their conditional decay rates. It builds on Papers I–IV and
   theorem you can use.**
 - **[REVIEW-AND-NEXT.md](REVIEW-AND-NEXT.md)** — the remaining work, split into
   **mathematical proof gaps fillable in Lean** and **physical model inputs**.
-- The paper source is under `../paper/`.
+- The paper source is under `../../paper/`.
+
+## Sibling library
+
+`PMAtoms` is a separate library in the same package: [README](../PMAtoms/README.md), [OVERVIEW](../PMAtoms/OVERVIEW.md), [REVIEW-AND-NEXT](../PMAtoms/REVIEW-AND-NEXT.md).
 
 ## Build and audit
 
@@ -61,7 +65,4 @@ select the physical interaction, measure normalization or coupling.
 
 ## Verification
 
-**4203** build jobs, **zero** errors, **zero** warnings.
-**722** strict-audited PMElementaryParticles declarations.
-No Paper VI imports; permitted axioms `propext`, `Classical.choice`, `Quot.sound`.
-Re-run `./check.sh` for current numbers rather than trusting this line.
+Run `./check.sh`. No Paper VI imports; permitted axioms `propext`, `Classical.choice`, `Quot.sound`.

@@ -16,8 +16,7 @@ The numeric factors are now expressed through `Δ,ν,σ,χ,D` with equality proo
 `sphereCoulomb` use those invariants. The line/ring arrangement and persistence
 selection remain model choices.
 
-The line/ring arrangement model is written up in
-[`nuclei_arrangement.md`](nuclei_arrangement.md): 4 channels = 3 hetero + 1 homo,
+The line/ring arrangement model is a 4-channel model: 3 hetero + 1 homo,
 line/ring topology, alpha diagonals, link masses `πD ± σ/2`, and the open
 Coulomb/valley term.
 

@@ -6,6 +6,8 @@ nucleons, then nuclei, then atoms, and ask what persists and what decays. The
 point is to produce **testable lifetime/mass comparisons**, not to restate
 textbook atomic physics.
 
+Sibling library: `PMElementaryParticles` — [README](../PMElementaryParticles/README.md), [OVERVIEW](../PMElementaryParticles/OVERVIEW.md), [REVIEW-AND-NEXT](../PMElementaryParticles/REVIEW-AND-NEXT.md).
+
 Build:
 
 ```

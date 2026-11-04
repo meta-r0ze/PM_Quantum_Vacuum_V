@@ -1,4 +1,4 @@
-# PM-5-Decay: overview of checked results
+# PMElementaryParticles — overview of checked results
 
 The single map of what Paper V proves and what later work can reuse. Open work is
 in [`REVIEW-AND-NEXT.md`](REVIEW-AND-NEXT.md); build instructions are in
