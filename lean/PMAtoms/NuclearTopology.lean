@@ -28,8 +28,10 @@ theorem closed_min_edges {A : Nat} (G : SimpleGraph (Fin A)) [DecidableRel G.Adj
 
 /-- **Open (line) systems.** A tree is the minimal connected graph: `A − 1` edges. -/
 theorem tree_edges {A : Nat} (G : SimpleGraph (Fin A)) [DecidableRel G.Adj]
-    (hG : G.IsTree) : G.edgeFinset.card = A - 1 :=
-  hG.card_edgeFinset
+    (hG : G.IsTree) : G.edgeFinset.card = A - 1 := by
+  have h := hG.card_edgeFinset
+  rw [Fintype.card_fin] at h
+  omega
 
 /-- The triangle `K3` has degree 2 at every vertex. -/
 theorem triangle_degree (v : Fin 3) : (⊤ : SimpleGraph (Fin 3)).degree v = 2 := by
