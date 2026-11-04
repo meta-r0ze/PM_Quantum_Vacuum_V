@@ -2,7 +2,7 @@
 
 The single map of what Paper V proves and what later work can reuse. Open work is
 in [`REVIEW-AND-NEXT.md`](REVIEW-AND-NEXT.md); build instructions are in
-[`README.md`](README.md). Sources are under `PMDecay/`, imported by `PMDecay.lean`.
+[`README.md`](README.md). Sources are under `PMElementaryParticles/`, imported by `PMElementaryParticles.lean`.
 Theorem names are entry points, not exhaustive lists; the Lean source is ground
 truth. Paper V builds on Papers I–IV and imports nothing from Paper VI.
 
@@ -147,8 +147,8 @@ persistent excitation.
 
 ## Verification
 
-Run `./check.sh` for current counts. The sibling `PMAtomic` library is documented
-separately in `PMAtomic/`; this file covers only the elementary-particle `PMDecay`
+Run `./check.sh` for current counts. The sibling `PMAtoms` library is documented
+separately in `PMAtoms/`; this file covers only the elementary-particle `PMElementaryParticles`
 library.
 No Paper VI imports; permitted axioms `propext`, `Classical.choice`, `Quot.sound`.
 Run `./check.sh` for current numbers.

@@ -3,7 +3,7 @@
 Checked mathematics and the module map are in [`OVERVIEW.md`](OVERVIEW.md). This
 file is only what remains, split by what a Lean proof can close (**Part A**) and
 what needs a physical model law or measured/selected input (**Part B**). Paper V's elementary-particle library builds clean; run `./check.sh` for current
-counts. The sibling `PMAtomic` library has its own `REVIEW-AND-NEXT.md`.
+counts. The sibling `PMAtoms` library has its own `REVIEW-AND-NEXT.md`.
 
 ## How to test the draft paper
 
@@ -125,6 +125,6 @@ remaining work is to select the physical law, not to hide its hypotheses.
 
 ## Verification
 **4203** build jobs, **zero** errors, **zero** warnings.
-**722** strict-audited PMDecay declarations.
+**722** strict-audited PMElementaryParticles declarations.
 No Paper VI imports; permitted axioms `propext`, `Classical.choice`, `Quot.sound`.
 Run `./check.sh` for current numbers.

@@ -54,7 +54,7 @@ source ~/.elan/env
 ./check.sh
 ```
 
-`check.sh` builds the `PMDecay` library, strictly audits transitive axioms against
+`check.sh` builds the `PMElementaryParticles` library, strictly audits transitive axioms against
 `propext`, `Classical.choice`, `Quot.sound`, and rejects Paper VI imports. A
 successful audit certifies the statements under their hypotheses; it does **not**
 select the physical interaction, measure normalization or coupling.
@@ -62,6 +62,6 @@ select the physical interaction, measure normalization or coupling.
 ## Verification
 
 **4203** build jobs, **zero** errors, **zero** warnings.
-**722** strict-audited PMDecay declarations.
+**722** strict-audited PMElementaryParticles declarations.
 No Paper VI imports; permitted axioms `propext`, `Classical.choice`, `Quot.sound`.
 Re-run `./check.sh` for current numbers rather than trusting this line.

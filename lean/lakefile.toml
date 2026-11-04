@@ -1,12 +1,12 @@
 name = "pm_decay"
 version = "0.1.0"
-defaultTargets = ["PMElementaryParticles", "PMAtomic"]
+defaultTargets = ["PMElementaryParticles", "PMAtoms"]
 
 [[lean_lib]]
 name = "PMElementaryParticles"
 
 [[lean_lib]]
-name = "PMAtomic"
+name = "PMAtoms"
 
 [[require]]
 name = "pm_framework"
