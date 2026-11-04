@@ -147,7 +147,8 @@ persistent excitation.
 
 ## Verification
 
-**4203** build jobs, **zero** errors, **zero** warnings.
-**722** strict-audited PMDecay declarations.
+Run `./check.sh` for current counts. The sibling `PMAtomic` library is documented
+separately in `PMAtomic/`; this file covers only the elementary-particle `PMDecay`
+library.
 No Paper VI imports; permitted axioms `propext`, `Classical.choice`, `Quot.sound`.
 Run `./check.sh` for current numbers.

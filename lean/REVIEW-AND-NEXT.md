@@ -2,8 +2,8 @@
 
 Checked mathematics and the module map are in [`OVERVIEW.md`](OVERVIEW.md). This
 file is only what remains, split by what a Lean proof can close (**Part A**) and
-what needs a physical model law or measured/selected input (**Part B**). Paper V
-builds clean (4203 jobs, zero warnings, 722 strict-audited declarations).
+what needs a physical model law or measured/selected input (**Part B**). Paper V's elementary-particle library builds clean; run `./check.sh` for current
+counts. The sibling `PMAtomic` library has its own `REVIEW-AND-NEXT.md`.
 
 ## How to test the draft paper
 
